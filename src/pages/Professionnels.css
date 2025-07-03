@@ -1,0 +1,163 @@
+.pro-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.pro-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.phone-banner {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background-color: #111;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  transition: background 0.3s ease;
+}
+
+.phone-banner:hover {
+  background-color: #333;
+}
+
+.phone-banner a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.blue {
+  background-color: #007bff;
+  color: white;
+}
+
+.green {
+  background-color: #28a745;
+  color: white;
+}
+
+.logo-pro {
+  width: 150px;
+  margin: 1rem 0;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 280px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(3px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* 🔽 Responsive Mobile & Tablette */
+@media (max-width: 768px) {
+  .pro-overlay {
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .phone-banner {
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo-pro {
+    width: 120px;
+    margin: 1rem 0;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90vw;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
